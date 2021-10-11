@@ -1,4 +1,4 @@
-# Denoising IMU Data with Transformers
+# Denoising IMU Data with Deep Learning
 ### Overview
 This repository provides a general framework for IMU denoising.
 The framework allows for selecting from different types of denoising methods and different types of backbones.
