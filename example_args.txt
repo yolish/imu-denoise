@@ -1,0 +1,19 @@
+### train + val ###
+
+--mode train-val
+--train_imu_dataset_file sample_data/07_03_21_static_random_accel_100_seq_of_1k_constant_train.csv
+--val_imu_dataset_file sample_data/07_03_21_static_random_accel_20_seq_of_1k_constant_test_1.csv
+--config_path configs/cnnb_residual.json
+
+
+--mode train-val
+--train_imu_dataset_file sample_data/07_03_21_static_random_accel_100_seq_of_1k_constant_train.csv
+--val_imu_dataset_file sample_data/07_03_21_static_random_accel_20_seq_of_1k_constant_test_1.csv
+--config_path configs/cnnb_seq2seq.json
+
+### validation ###
+--mode val
+--val_imu_dataset_file sample_data/07_03_21_static_random_accel_20_seq_of_1k_constant_test_1.csv
+--config_path configs/cnnb_residual.json
+--checkpoint_path
+out/run_11_10_21_18_25_checkpoint-240.pth

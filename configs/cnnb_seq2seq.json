@@ -1,0 +1,43 @@
+{
+	"n_freq_print": 10,
+	"n_freq_checkpoint": 20,
+	"n_workers": 4,
+	"device_id": "cuda:0",
+	"backbone_type": "cnnb",
+	"denoising_type":"seq2seq",
+	"input_dim": 3,
+	"window_size":50,
+	"batch_size": 128,
+	"lr": 1e-2,
+	"weight_decay": 1e-3,
+	"eps": 1e-10,
+	"lr_scheduler_step_size": 80,
+	"lr_scheduler_gamma": 0.5,
+	"n_epochs": 240,
+
+	"backbones": {
+		"cnnb":
+		{
+			"c0": 16,
+			"dropout":0.1,
+			"ks":[7, 7, 7, 7],
+			"ds": [4, 4, 4],
+			"momentum": 0.1
+		},
+		"transformer":
+		{
+			"encode_position":true,
+			"transformer_dim": 256,
+			"nhead": 8,
+			"num_encoder_layers": 6,
+			"num_decoder_layers": 6,
+			"dim_feedforward": 2048,
+			"transformer_dropout": 0.1,
+			"transformer_activation": "gelu",
+			"head_activation": "gelu"
+			}
+	}
+
+
+	}
+
